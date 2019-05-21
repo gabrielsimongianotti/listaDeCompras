@@ -1,4 +1,4 @@
-.boncoLogin{
+.blocoLogin{
     background-color: #fff;
     height: 400px;
     width: 250px;
@@ -9,7 +9,8 @@
     margin-right: auto;
     margin-top: 3%;
 }
-.boncoLogin img{
+
+.blocoLogin img{
     margin: 0% 0% 10% 25%;
     height: 50%;
     width: 50%;

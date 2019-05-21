@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='css/style.css'>
+    <script src='cadastro.js'></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="">
+    </header>
+    <div class="blocoLogin" >
+        <form action="/errocadastro" method="post">
+            <img src="/imagens/logo.png">
+            <br>
+            <label>Email</label>
+            <input type="email" name="login" id="login" value="<%= dados.login %>">
+            <br><br>
+            <label>Nome de usuario</label>
+            <input type="text" name="nome" id="nome" value="<%= dados.nome %>">
+            <br><br>
+            <label>Senha</label>
+            <input type="password" name="senha" id="senha" value="<%= dados.senha %>">
+            <br><br>
+            <label>Nova senha</label>
+            <input type="password" name="nSenha" id="nSenha" value="<%= dados.nSenha %>">
+            <br><br>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <br>
+        
+    </div>
+</body>
+
+</html>

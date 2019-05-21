@@ -15,5 +15,5 @@
     "start": "index.js"
   },
   "author": "Gabriel Simon Gianotti",
-  "license": "ISC"
+  "license": "MIT"
 }
