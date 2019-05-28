@@ -14,12 +14,26 @@ module.exports.verifica = function (application, req, res) {
     console.log(erros);
     console.log("dados ", dados);
 
-    if (erros != '' && dados.senha == dados.nSenha) {
+    if (erros != '' || dados.senha != dados.nSenha) {
         res.render('cadastros/erroCadastro', { dados: dados });
         return;
-    } else {
-        res.redirect("/");
-        return;
+    } 
+    var cadastro ={
+       "email":dados.login,
+        "nome":dados.nome,
+        "senha":dados.senha
     }
-
+    console.log("cadastro",cadastro);
+    var connection = application.config.mySQLConnection();
+    var listaModel = new application.app.models.listaModel(connection);
+    listaModel.addUsuario(cadastro,function(error,result){
+        console.log("error",error);
+        if(error !=null){
+            res.render('cadastros/erroCadastro', { dados: dados });
+            console.log("error error error error");
+            return;
+        }
+        res.redirect("/");
+      
+    })
 }

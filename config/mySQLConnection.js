@@ -13,8 +13,8 @@
      return mysql.createConnection({
          host: 'localhost',
          user: 'root',
-         password: '',
-         database: ''
+         password: '123g',
+         database: 'lista'
      });
      
  }
